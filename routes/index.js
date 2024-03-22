@@ -4,6 +4,10 @@ var router = express.Router();
 var customerController = require('../controllers/customer')
 
 
+router.get('/', function (req,res,next) {
+    res.render('index',{})
+});
+
 router.post('/customer/signup', customerController.customerSignup );
 
 router.post('/customer/login', customerController.customerLogin );

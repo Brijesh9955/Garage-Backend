@@ -5,7 +5,7 @@ var customerController = require('../controllers/customer')
 
 
 router.get('/', function (req,res,next) {
-    res.render('index',{})
+    res.render('index',{title: "Express"})
 });
 
 router.post('/customer/signup', customerController.customerSignup );
